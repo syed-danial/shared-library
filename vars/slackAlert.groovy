@@ -11,7 +11,7 @@ def call(String successMessage='', String failureMessage='', String otherMessage
       )
     }
   }  
-  catch (exception e){
+  catch (Exception e){
     currentBuild.result = 'FAILURE'
     error("Failed to send Slack notification: ${e.message}")
   }
