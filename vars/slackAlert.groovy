@@ -2,7 +2,7 @@ def call(String successMessage='', String failureMessage='', String otherMessage
   try{
     def buildStatus = currentBulid.currentResult
     def message = buildStatus == 'SUCCESS' ? successMessage :
-        buildStatus == 'FAILURE' : ? failureMessage : otherMessage
+        buildStatus == 'FAILURE' ? failureMessage : otherMessage
     if(message) {
       slackSend(
         color : buildStatus == 'SUCCESS' ? '#36a64f' :
