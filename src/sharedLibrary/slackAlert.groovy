@@ -1,4 +1,4 @@
-package mySharedLibrary
+package sharedLibrary
 
 class SlackAlert implements Serializable {
     String successMessage
